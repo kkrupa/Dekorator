@@ -11,17 +11,17 @@ public class DecoratorTest {
 		Okno c = new ZwykleOkno();
 		c.open();
 		
-		Okno v = new DecoratorButton(new ZwykleOkno());
-		v.open();
+		c = new DecoratorButton(new ZwykleOkno());
+		c.open();
 		
-		Okno b = new DecoratorSlider(new DecoratorButton(new ZwykleOkno()));
-		b.open();
+		c = new DecoratorSlider(new DecoratorButton(new ZwykleOkno()));
+		c.open();
 		
-		Okno m = new DecoratorLabel(new DecoratorSlider(new DecoratorButton(new ZwykleOkno())));
-		m.open();
+		c = new DecoratorLabel(new DecoratorSlider(new DecoratorButton(new ZwykleOkno())));
+		c.open();
 		
-		Okno n = new DecoratorButton(new DecoratorSlider(new DecoratorLabel(new ZwykleOkno())));
-		n.open();
+		c = new DecoratorButton(new DecoratorSlider(new DecoratorLabel(new ZwykleOkno())));
+		c.open();
 	}
 
 }
